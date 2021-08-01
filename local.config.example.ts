@@ -1,0 +1,1 @@
+export const BSCScanAPIKey = "{BSC_SCAN_API_KEY}";
