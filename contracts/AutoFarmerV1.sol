@@ -174,12 +174,4 @@ contract AutoFarmerV1 is Ownable, ReentrancyGuard {
     emit Withdraw(msg.sender, _pid, _wantAmt);
   }
 
-  // Withdraw without caring about rewards. EMERGENCY ONLY.
-  function emergencyWithdraw(uint256 _pid) public {
-    PoolInfo storage pool = poolInfo[_pid];
-    UserInfo storage user = userInfo[_pid][msg.sender];
-    pool.farmToken.safeTransfer(address(msg.sender), user.shares);
-    emit EmergencyWithdraw(msg.sender, _pid, user.shares);
-    user.shares = 0;
-  }
 }
