@@ -2,7 +2,7 @@
   "name": "hardhat-project",
   "license": "MIT",
   "scripts": {
-    "test": "hardhat test",
+    "test": "hardhat test --network hardhat",
     "compile": "hardhat compile",
     "coverage": "hardhat coverage",
     "deploy-core": "hardhat run ./scripts/deploy.ts"

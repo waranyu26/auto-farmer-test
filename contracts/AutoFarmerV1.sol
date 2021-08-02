@@ -90,6 +90,14 @@ contract AutoFarmerV1 is Ownable, ReentrancyGuard {
         .div(wantLockedTotal)
         .div(entranceFeeFactorMax);
     }
+
+    console.log("\t---------------- Strategy Data Deposit -----------------");
+    console.log("\t  wantLockedTotal is %s", wantLockedTotal);
+    console.log("\t  sharesTotal is %s", sharesTotal);
+    console.log("\t  entranceFeeFactor is %s", entranceFeeFactor);
+    console.log("\t  entranceFeeFactorMax is %s", entranceFeeFactorMax);
+    console.log("\t  sharesAdded is %s", sharesAdded);
+    console.log("\t--------------------------------------------------------");
     return sharesAdded;
   }
 
@@ -101,6 +109,12 @@ contract AutoFarmerV1 is Ownable, ReentrancyGuard {
     if (sharesRemoved > sharesTotal) {
       sharesRemoved = sharesTotal;
     }
+
+    console.log("\t---------------- Strategy Data Withdraw -----------------");
+    console.log("\t  wantLockedTotal is %s", wantLockedTotal);
+    console.log("\t  sharesTotal is %s", sharesTotal);
+    console.log("\t  sharesRemoved is %s", sharesRemoved);
+    console.log("\t---------------------------------------------------------");
     return sharesRemoved;
   }
 

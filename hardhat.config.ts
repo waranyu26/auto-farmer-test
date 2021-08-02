@@ -2,7 +2,7 @@ import { task } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
 
-import { BSCScanAPIKey } from "./local.config";
+import { BSCScanAPIKey, SpeedyNodesKey } from "./local.config";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -22,7 +22,7 @@ export default {
   networks: {
     hardhat: {
       forking: {
-        url: "https://bsc-dataseed.binance.org/",
+        url: `https://speedy-nodes-nyc.moralis.io/${SpeedyNodesKey}/bsc/mainnet`,
       },
       mining: {
         auto: true,
